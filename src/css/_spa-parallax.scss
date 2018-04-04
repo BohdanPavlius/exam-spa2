@@ -1,0 +1,33 @@
+.spa-parallax {
+	min-height: 660px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+
+  &-main {
+  	@include make-col-ready();
+  	@include make-col(12);
+
+  		@include media-breakpoint-up(lg) {
+  			@include make-col(10);
+  			@include make-col-offset(1);
+  		}
+
+	  	&__title {
+	  		font-size: 30px;
+	  		font-weight: 600;
+	  		@include media-breakpoint-up(lg) {
+	  			font-size: 47px;
+	  		}
+	  	}
+
+	  	&__text {
+	  		font-size: 18px;
+	  		line-height: 24px;
+	  		font-family: 'Open Sans', sans-serif;
+	  		margin-top: 40px;
+	  	}	
+  }
+
+}

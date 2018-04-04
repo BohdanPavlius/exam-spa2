@@ -1,0 +1,145 @@
+.services {
+	padding: 60px 0;
+	text-align: center;
+	color: #333333;
+
+	&__title {
+		@include make-col-ready();
+		@include make-col(12);
+
+			text-transform: uppercase;
+			color: $color_high;
+			font-size: 36px;
+			font-weight: 700;
+
+		@include media-breakpoint-up(lg) {
+			@include make-col(4);
+			@include make-col-offset(4);
+
+
+		}
+	}
+
+	&-tab {
+		@include make-col-ready();
+		@include make-col(12);
+		margin-top: 50px;
+	}
+
+}
+
+.nav {
+	&-item {
+		background-color: $color_bg_nav;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+	}
+
+	&-link {
+		padding: 0;
+		line-height: 70px;
+		text-transform: uppercase;
+		color: $color_white;
+		transition: all .4s;
+
+
+		&:hover {
+			color: $color_white;
+			background-color: $color_high;
+		}
+
+		&.active:before {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-left: 22px solid transparent;
+			border-right: 22px solid transparent;
+			border-top: 22px solid $color_high;
+			bottom: -22px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&.active {
+			background-color: $color_high;
+		}
+	}
+}
+
+.tab-pane {
+	margin-top: 55px;
+	@include make-col-ready();
+	@include make-col(12) ;
+
+	&-content {
+		text-align: left;
+		@include make-col-ready();
+		@include make-col(12);
+
+			@include media-breakpoint-up(lg) {
+				@include make-col(7);
+			}
+	}
+
+	&__title {
+			font-size: 24px;
+			color: #0099cc;
+			font-weight: 900;
+			text-transform: uppercase;
+			padding-top: 13px;
+			padding-bottom: 13px;
+			padding-left: 18px;
+			background: -moz-linear-gradient(left, rgba(204,204,204,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(204,204,204,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(204,204,204,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				span {
+					font-weight: 400;
+				}
+		}
+
+		&__text {
+			padding-left: 18px;
+			font-family: 'Lato', sans-serif;
+			line-height: 24px;
+			margin: 36px 0 28px;
+				
+		}
+
+		&__list {
+			list-style: none;
+			padding-left: 18px;
+			
+
+			&-item {
+				border-bottom: 1px solid #cccccc;
+				line-height: 50px;
+				padding-left: 20px;
+				position: relative;
+
+				&:before {
+					font-family: "Ionicons";
+					content: "\f125";
+					position: absolute;
+					left: 0;
+					color: #0099cc;
+				}
+			}
+		}	
+
+	&-image {
+		@include make-col-ready();
+		@include make-col(12);
+
+		@include media-breakpoint-up(lg) {
+			@include make-col(4);
+			@include make-col-offset(1);
+		}
+	}
+
+
+}

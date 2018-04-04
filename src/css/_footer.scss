@@ -1,0 +1,48 @@
+.footer-main {
+	padding: 20px 0; 
+	background-color: #0099cc;
+	color: #fff;
+	min-height: 80px;
+
+
+
+	&__copy {
+
+		@include make-col-ready();
+		@include make-col(12);
+
+			@include media-breakpoint-up(md) {
+				@include make-col(4);
+			}
+	}
+
+	&__social {
+		@include make-col-ready();
+		@include make-col(12);
+		text-align: left;
+
+		@include media-breakpoint-up(md) {
+				@include make-col-offset(3);
+				@include make-col(5);
+				text-align: right;
+				
+			}
+
+			& p {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 14px;
+				font-weight: 700;
+				display: inline-block;
+				margin-right: 48px;
+			}
+
+			& span {
+				font-size: 20px;
+
+				&:not(:first-child) {
+					margin-left: 18px;
+				}
+			}
+
+	}
+}

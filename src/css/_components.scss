@@ -1,0 +1,33 @@
+.cta-button {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: $color_white;
+	background-color: $color_high;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 28px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: all .4s;
+
+	&:hover {
+		color: $color_high;
+		background-color: $color_white;
+		text-decoration: none;
+	}
+}
+
+.arrow-down {
+	width: 45px;
+	height: 20px;
+	fill: #fff;
+    fill-rule: evenodd;
+
+
+    @include media-breakpoint-up(md) {
+    	width: 76px;
+    	height: 35px;
+    }
+}
